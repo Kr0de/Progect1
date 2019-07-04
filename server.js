@@ -3,7 +3,9 @@ const port = 3000,
       express = require('express'),
       app = express(),
       bodyParser = require('body-parser'),// нужен для работы с формами
-      urlencodedParser = bodyParser.urlencoded({ extended: false });//промежуточное ПО для post запросов
+      urlencodedParser = bodyParser.urlencoded({ extended: false }),//промежуточное ПО для post запросов
+      server = require("http").createServer(app),
+      io = require("socket.io").listen(server);
 
       app.post('/server.js', urlencodedParser, function(req,res){
         console.log(req.body);
@@ -45,4 +47,21 @@ const port = 3000,
         res.render('error.ejs');
       })
 
-      app.listen(port);
+  server.listen(3000);
+
+
+  users = [];
+  connections = [];
+
+  io.sockets.on('connection', function(socket){
+    console.log("SuccessOn");
+    connections.push(socket);
+
+    socket.on('disconnect', function(data){
+      connections.splice(connections.indexOf(socket), 1);
+      console.log('SuccessOff')
+    });
+    socket.on('send mess', function(data){
+      io.sockets.emit('add mess', {msg: data});
+    });
+  });

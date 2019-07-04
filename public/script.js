@@ -109,5 +109,21 @@ let form = document.querySelector('.signUp__form'),
 //     });
 //   });
 
+// Comments
+
+let windowWidth = document.documentElement.clientWidth/2 - parseFloat($('.post__comment__window').css('width'))/2;
+$('.post__comment').on('click', () =>{
+  $('.post__comment__window').fadeToggle('slow');
+  $('.post__comment__window').css('left', `${windowWidth}px`);
+  $('.post__comment__window').css('top', `${$(document).scrollTop()}px`);
+  //$('body').toggleClass('body__click');
+  let clickH = $(document).scrollTop();
+  console.log(clickH);
+});
+console.log(parseFloat($('.post__comment__window').css('width'))/2);
+
+$('.close').on('click', function(){
+  $('.post__comment__window').fadeToggle('slow');
+});
 
 });

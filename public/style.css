@@ -5,6 +5,7 @@ body{
 	background: #f9f9fb;
 }
 .body__click{
+	opacity: 1;
 	overflow: hidden;
 }
 header{
@@ -342,6 +343,65 @@ main{
 	margin-left: 30px;
 	font-size: 14px;
 	word-spacing: 5px;
+	cursor: pointer;
+}
+.post__comment__window{
+	display: none;
+	width: 300px;
+	height: auto;
+	background: #000000;
+	position: absolute;
+	top: 800px;
+	left: 100px;
+	border-radius: 10px;
+}
+.post__comment__window .close{
+	width: 100%;
+	height: 30px;
+	background: #2d283b;
+	border-radius: 10px;
+}
+.post__comment__window .close img{
+	float: right;
+	background: #8d1122;
+	height: 30px;
+	border-radius: 0 10px 0 0;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.post__comment__window .close img:hover{
+	opacity: 1;
+}
+.post__comment__window h1{
+	text-align: center;
+	font-size: 25px;
+	color: white;
+}
+.post__comment__window .entryField{
+	height: 300px;
+	width: 290px;
+	background: white;
+	margin: 5px auto;
+	border-left: 5px solid #604d62;
+	border-right: 5px solid #604d62;
+}
+.post__comment__window form{
+	display: flex;
+	margin: 0 5px 10px 5px;
+}
+.post__comment__window textarea{
+	width: 100%;
+	height: 50px;
+	border: 0;
+	padding: 0;
+	font-size: 18px;
+}
+.post__comment__window input{
+	width: 70px;
+	height: 50px;
+	background: blue;
+	border: 0;
+	padding: 0;
 }
 .post__social{
 	margin-left: 70px;
