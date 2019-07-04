@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Error</title>
+	<% include blocks/fonts.ejs %> 
+	<link rel="stylesheet" href="../public/error.css">
+</head>
+<body>
+	<div class="error__location">
+		<div class="error__img"><img src="../public/img/404.png" alt=""></div>
+		<div class="error__search">
+			<form action="">
+				<input type="text" placeholder="Type any keyword">
+				<input type="button">
+			</form>
+		</div>
+		<div class="error__text">
+			<h1>Sorry!</h1>
+			<p>The page you are looking for does not exist or another error occurred</p>
+		</div>
+		<div class="error__link-home">
+			<a href="index">
+				<img src="../public/img/home.png" alt="">
+				<p>GO BACK HOME</p>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
