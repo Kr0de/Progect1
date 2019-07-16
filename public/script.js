@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+  //Основное меню 
 $('#menu').on('click', function(){
 if($('.menu__hover').css('display') == 'none'){
   $('.menu__hover').show('slow');
@@ -25,8 +26,8 @@ $(window).resize(function(){ //Фикс косяка с изменением о�
   }
 });
 $(window).resize();
-
-
+// Конец меню
+// Основной слайдер 
 let
     sliderIndex = 1,
     next = document.querySelector('.slider__arrow-top'),
@@ -71,24 +72,42 @@ let
         plusSlides(1);
     });
 
-
+// Конец основного слайдера
 
 let form = document.querySelector('.signUp__form'),
-    input = form.getElementsByTagName('input');
+    input = form.querySelectorAll('input');
 
     input[0].addEventListener('change', function(){
       input[0].required = false;
     })
-
-
+// Чистка формы после отправки
+    function clearForm(){
+          input.forEach((item) => {
+                if(item.type == 'submit'){
+                  item.addEventListener('click', ()=>{
+                  input.forEach((item) => {
+                 if(item.type != 'submit'){
+                    item.value = '';
+                  }
+                });
+              });
+            }
+        });
+      }
+// Ajax запрос
   form.addEventListener('submit', function(e){
 
     e.preventDefault();
     let request = new XMLHttpRequest();
-    request.open("POST", "server.js");
+    request.open("POST", "server.js", true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     let formData = new FormData(form);
     request.send(formData);
+    console.log(request.readystate);
+    console.log(request.status);
+    console.log(request.statusText);
+    console.log(request.response);
+    clearForm();
   });
 
 //let form1 = $('.signUp__form');

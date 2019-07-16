@@ -43,6 +43,9 @@ const port = 3000,
       app.get('/contact', function(req,res){
         res.render('contact.ejs');
       })
+      app.get('/shop', function(req,res){
+        res.render('shop.ejs');
+      })
       app.get('/:id', function(req,res){
         res.render('error.ejs');
       })

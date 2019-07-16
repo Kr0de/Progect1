@@ -1,0 +1,259 @@
+.shop__location *{
+	font-family: 'Montserrat', sans-serif;
+}
+.shop__menu ul{
+	display: flex;
+	background: #3f4246;
+	justify-content: center;
+	margin-bottom: 5px;
+	height: 40px;
+}
+.shop__menu li{
+	list-style: none;
+	font-size: 1em;
+	cursor: pointer;
+	color: #ffffff;
+}
+.shop__menu li p{
+	padding: 10px 10px 10px 10px;
+}
+.shop__menu li p:hover{
+	background: #86b817;
+}
+.shop__menu ul>li>ul{
+	position: relative;
+	top: 40px;
+	left: 0;
+	display: none;
+	flex-direction: column;
+	padding: 0;
+	background: #ffffff;
+}
+.shop__menu ul>li>ul>li{
+	color: #000000;
+	background: #ffffff;
+}
+.shop__menu ul>li>ul>li>p>img{
+	float: right;
+	margin-top: 5px;
+}
+.shop__menu__active{
+	display: flex !important;
+}
+.shop__date__location{
+	width: 50%;
+	float: left;
+}
+.shop__slider{
+	margin: 0 0 20px 50%;
+	background: #ffffff;
+}
+.shop__slider__slide__location{
+
+}
+.slide{
+	width: 100%;
+	height: 480px;
+	background-size: cover;	
+}
+.slide:not(:first-child){
+	display: none;
+}
+.slide1{
+	background: url('../public/img/shop-layer1.png') no-repeat ;
+}
+.slide3{
+	background: url('../public/img/shop-layer2.png') no-repeat ;
+}
+.shop__slider__subMenu ul{
+	display: flex;
+	border-top: 1px solid #edf1f2;
+	width: 100%;
+	padding: 0;
+}
+.shop__slider__subMenu li{
+	list-style: none;
+	padding: 10px 10px 10px 10px;
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+.shop__slider__subMenu li:hover{
+	border-bottom: 2px solid #86b817; 
+}
+
+/*Заголовок коллекции с товарами*/
+.shop__collections__location{
+	background: #ffffff;
+	
+}
+.shop__collections__header{
+	background: #ffffff;
+	padding: 30px;
+	border-bottom: 3px solid #edf1f2; 
+}
+.shop__collections__header h1{
+	display: inline-block;
+}
+.shop__collections__header a{
+	float: right;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/*Сами товары*/
+.shop__collections__content{
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 15px 10px;
+}
+.shop__card{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+	box-sizing: cover;
+	box-shadow: 5px 5px 30px #000000;
+}
+.shop__card:hover{
+	position: relative;
+	top: -10px;
+	background: linear-gradient(to top, #BAD9D5 10%, #fff);
+}
+.shop__card *{
+	margin-bottom: 10px;
+}
+.shop__card__wrap{
+	margin: 0 auto;
+	box-sizing: cover;
+}
+.shop__card__wrap img{
+	max-width: 200px;
+}
+.shop__card__description{
+	margin: 0 auto;
+	font-size: 15px;
+}
+.shop__card__description a{
+	text-decoration: none;
+	background: blue;
+	color: #ffffff;
+	font-weight: bold;
+	float: center;
+}
+.shop__card__description .star{
+	background: url('../public/img/sprait.png') no-repeat 56% 28.5%;
+	width: 100px;
+	height: 15px;
+}
+.shop__card__description form{
+	margin-top: 160px;
+}
+.shop__card__description form label{
+	font-size: 20px;
+	font-weight: bold;
+}
+.shop__card__description form input{
+	display: block;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	background: red;
+	padding: 0;
+	border: 1px solid yellow;
+	border-radius: 5px;
+}
+
+
+/*Всплывающая штука при нажатии на товар*/
+.card__floatUp{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+}
+.card__floatUp__opacity{
+	background: #000;
+	width: 100%;
+	opacity: .85;
+}
+.card__floatUp__content{
+	position: absolute;
+	left: 40%;
+	top: 5%;
+	background: #000;
+	margin: 0 auto;
+	box-sizing: cover;
+	box-shadow: 0px 0px 100px #fff;
+	width: 400px;
+	height: 200px;
+}
+.card__floatUp__left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background: #57524C;/* url('../public/img/huawei-gold.jpg') no-repeat 50% 50%;
+	background-size: 65% 80%; */
+}
+.card__floatUp__left>.sell{
+	float: right;
+	width: 100px;
+	height: 30px;
+	background: red;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 30px;
+}
+.card__floatUp__right{
+	float: right;
+	width: 50%;
+	height: 100%;
+	background: #fff;
+}
+.card__floatUp__right__wrap{
+	margin: 20px 5px 10px 20px;
+}
+.card__floatUp__right h1{
+	margin-bottom: 40px;
+}
+.card__floatUp__right h1:after{
+	position: relative;
+	z-index: 100;
+	left: -20px;
+	display: block;
+	content: '';
+	width: 250px;
+	height: 1px;
+	background: red;
+}
+.card__floatUp__right p{
+	margin-bottom: 10px;
+}
+.card__floatUp__right form{
+	margin-top: 130px;
+}
+.card__floatUp__right form input{
+	width: 200px;
+	height: 40px;
+	color: #ffffff;
+	margin-bottom: 5px;
+	padding: 0;
+	border: 0;
+}
+.card__floatUp__right form [name=cash]{
+	background: red;
+}
+.card__floatUp__right form [name=sell]{
+	background: grey;
+}
+.active{
+	display: block;
+}
+.overflow{
+	overflow: hidden;
+}

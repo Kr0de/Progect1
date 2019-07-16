@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shop</title>
+	<link rel="stylesheet" href="../public/style.css">
+	<link rel="stylesheet" href="../public/shop.css">
+	<link rel="stylesheet" href="../public/calendar.css">
+
+	<% include blocks/fonts.ejs %> 
+</head>
+<body>
+	<% include blocks/header.ejs %>	
+	<% include blocks/banner.ejs %>	
+	<main>
+		<div class="shop__location">
+			<div class="shop__menu">
+				<ul>
+					<li id="Shop-by-Category">
+						<p>Shop by Category</p>
+						<ul>
+							<li><p>Computers <img src="../public/img/shop-arrow.png" alt=""></p></li>
+							<li><p>Clothers <img src="../public/img/shop-arrow.png" alt=""></p></li>
+							<li><p>Phones <img src="../public/img/shop-arrow.png" alt=""></p></li>
+						</ul>
+					</li>
+					<li>
+						<p>Deals</p>
+						<ul>
+							<li><p>Computers <img src="../public/img/shop-arrow.png" alt=""></p></li>
+							<li><p>Clothers <img src="../public/img/shop-arrow.png" alt=""></p></li>
+							<li><p>Phones <img src="../public/img/shop-arrow.png" alt=""></p></li>
+						</ul>
+					</li>
+					<li><p>Mobile & accessories</p></li>
+					<li><p>Laptops & Tablets</p></li>
+					<li><p>Fashion</p></li>
+					<li><p>Home & Living</p></li>
+					<li><p>Cameras</p></li>
+					<li><p>Televisions</p></li>
+					<li><p>Health & Beauty</p></li>
+					<li><p>All Electoronics</p></li>
+					<li><p>Help</p></li>
+				</ul>
+			</div>
+			<div class="shop__date__location">
+				<% include blocks/calendar.ejs %>
+			</div>
+
+			<div class="shop__slider">
+				<div class="shop__slider__slide__location">
+					<div class="slide1 slide"></div>
+					<div class="slide1 slide"></div>
+					<div class="slide3 slide"></div>
+					<div class="slide1 slide"></div>
+					<div class="slide1 slide"></div>
+					<div class="slide1 slide"></div>
+				</div>
+				<div class="shop__slider__subMenu">
+					<ul>
+						<li class="sub__slide">Daily Deals</li>
+						<li class="sub__slide">Laptops</li>
+						<li class="sub__slide">Mobile</li>
+						<li class="sub__slide">Clothing</li>
+						<li class="sub__slide">Kitchen Appliances</li>
+						<li class="sub__slide">Gifts Vouchers</li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop__collections__location">
+				<div class="shop__collections__header">
+					<h1>Collections of product</h1>
+					<a href="">See all products</a>
+				</div>
+				<div class="shop__collections__content">
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-gold.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei  Y3</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">5770 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-Y5-2.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei  Y5 Lite</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">6970 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-Y6-prime.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei  Y6 Prime</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">7890 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-Y7-2017-2.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei Y7 2017</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">9500 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-Y7-2019.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei  Y7 2019</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">12990 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+					<div class="shop__card">
+						<div class="shop__card__wrap"><img src="../public/img/huawei-p-2019.jpg" alt=""></div>
+						<div class="shop__card__description">
+							<p>Huawei  P 2019</p>
+							<p>Smartphone</p>
+							<div class="star"></div>
+							<form action="">
+								<label for="buy">6970 руб.</label>
+								<input type="button" name="buy" value="Купить">
+							</form>
+							<a href="">Lear more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<% include blocks/footer.ejs %>
+	<script src="../public/shop.js"></script>
+	<script src="../public/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</body>
+
+<div class="card__floatUp">
+	<div class="card__floatUp__opacity"></div>
+	<div class="card__floatUp__content">
+		<div class="card__floatUp__left">
+	 		<!-- <div class="sell">5770 руб.</div> -->
+	 </div>
+	 <div class="card__floatUp__right">
+	 	<!-- <div class="card__floatUp__right__wrap">
+	 	<h1>Huawei  Y3</h1>
+	 	<p>Описание:</p>
+	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, architecto.</p>
+	 	<form action="">
+	 		<input type="button" value="Добавить в корзину" name="cash">
+	 		<input type="button" value="Получить скидку" name="sell">
+	 	</form>
+	 	</div> -->
+	 </div> 
+	</div>
+</div>
+</html>
